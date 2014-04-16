@@ -1,0 +1,1 @@
+/Users/shufo/vimperator_plugins/vimperator-plugins/maine_coon.js
