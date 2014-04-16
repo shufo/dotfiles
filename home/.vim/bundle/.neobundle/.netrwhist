@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/usr/local/Cellar/httpd/2.2.22/etc/apache2'
+let g:netrw_dirhist_2='/usr/local/Cellar/httpd/2.2.22/etc'
+let g:netrw_dirhist_3='/usr/local/Cellar/httpd/2.2.22/etc/apache2'
+let g:netrw_dirhist_4='/usr/local/Cellar/httpd/2.2.25/libexec'
+let g:netrw_dirhist_5='/Users/shufo/cookbooks/mysql'
+let g:netrw_dirhist_6='/Users/shufo/.oh-my-zsh'
+let g:netrw_dirhist_7='/Users/shufo/Dropbox/photon-realtime-php/app/Plugin/Migrations/Config'
+let g:netrw_dirhist_8='/Users/shufo/Dropbox/photon-realtime-php/app/Plugin/Migrations'
