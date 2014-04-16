@@ -11,19 +11,17 @@ inoremap  u
 let &cpo=s:cpo_save
 unlet s:cpo_save
 
-"colorscheme Tomorrow-Night
-
 set encoding=utf-8
 set termencoding=utf-8
 set ambiwidth=double
 set autoindent
 set background=dark
 set backspace=indent,eol,start
-set backup
-set backupdir=~/.vimbackup
+"set backup
+"set backupdir=~/.vimbackup
 set clipboard=unnamed
 set cmdheight=2
-set directory=~/.vimbackup
+"set directory=~/.vimbackup
 set expandtab
 set tabstop=4
 set fileencodings=guess,ucs-bom,latin1,iso-2022-jp-3,utf-8,euc-jisx0213,euc-jp,cp932
@@ -41,7 +39,7 @@ set laststatus=2
 "set migemodict=/Applications/MacVim.app/Contents/Resources/vim/runtime/dict/migemo-dict
 set mouse=a
 set ruler
-set runtimepath=~/.vim,/Applications/MacVim.app/Contents/Resources/vim/vimfiles,/Applications/MacVim.app/Contents/Resources/vim/runtime,/Applications/MacVim.app/Contents/Resources/vim/vimfiles/after,~/.vim/after,/Applications/MacVim.app/Contents/Resources/vim/plugins/autofmt,/Applications/MacVim.app/Contents/Resources/vim/plugins/kaoriya,/Applications/MacVim.app/Contents/Resources/vim/plugins/vimdoc-ja
+"set runtimepath=~/.vim,/Applications/MacVim.app/Contents/Resources/vim/vimfiles,/Applications/MacVim.app/Contents/Resources/vim/runtime,/Applications/MacVim.app/Contents/Resources/vim/vimfiles/after,~/.vim/after,/Applications/MacVim.app/Contents/Resources/vim/plugins/autofmt,/Applications/MacVim.app/Contents/Resources/vim/plugins/kaoriya,/Applications/MacVim.app/Contents/Resources/vim/plugins/vimdoc-ja
 set showmatch
 set smartcase
 set smarttab
@@ -54,8 +52,8 @@ filetype off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'zenorocha/dracula-theme'
 "NeoBundle 'Shougo/vimproc'
