@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# echo bootstrap message
+
+global_progress=0
+show_progress () {
+	local zan=$(( $1 * 10 ))
+	while [ $zan -gt 0 ]; do
+	  echo `expr '/-\|' : '.\{'$global_progress'\}\(.\)'` | tr \\012 \\010
+	  global_progress=`expr \( $global_progress + 1 \) % 4 `
+	  zan=$(( $zan - 1 ))
+	  sleep 0.1
+	done
+}
+
+
+echo "This will setup shufo/dotfiles on your computer...wait a minute or Ctrl-c to cancel"
+show_progress 2
+echo "Install homebrew"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo "Install brew softwarest"
+brew install git zsh openssl coreutils tmux tig tmate jq hub findutils gawk gnu-sed gnu-tar binutils awscli ack the_silver_searcher tmux-mem-cpu-load openssl
+echo "Install ohmyzsh"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo "Install"
