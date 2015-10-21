@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Ensure dotfiles are Up to date
+
+cp -f ~/.zshrc ../
+cp -f ~/.vimrc ../
+cp -f ~/.tmux.conf ../
+git add -A
+git commit -m "Ensure dotfiles are up todate"
+git push origin master
