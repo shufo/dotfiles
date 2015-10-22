@@ -15,11 +15,24 @@ show_progress () {
 
 
 echo "This will setup shufo/dotfiles on your computer...wait a minute or Ctrl-c to cancel"
+
 show_progress 2
+
 echo "Install homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-echo "Install brew softwarest"
-brew install git zsh openssl coreutils tmux tig tmate jq hub findutils gawk gnu-sed gnu-tar binutils awscli ack the_silver_searcher tmux-mem-cpu-load openssl
+
+echo "Install cask applications "
+export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
+brew tap Homebrew/bundle
+brew bundle
+
 echo "Install ohmyzsh"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo "Install"
+
+echo "Copy dotfiles"
+[[ -f ~/.vimrc ]] && cp ~/.vimrc{,.org}
+cp -f ../.vimrc ~/.vimrc
+[[ -f ~/.zshrc ]] && cp ~/.zshrc{,.org}
+cp -f ../.zshrc ~/.zshrc
+[[ -f ~/.tmux.conf ]] && cp ~/.tmux.conf{,.org}
+cp ../.tmux.conf ~/.tmux.conf
