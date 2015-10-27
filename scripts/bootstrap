@@ -24,6 +24,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 echo "Install cask applications "
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
 brew tap Homebrew/bundle
+brew update
+brew upgrade
 brew bundle
 
 echo "Install ohmyzsh"

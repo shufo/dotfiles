@@ -1,9 +1,3 @@
-# Make sure using latest Homebrew
-update
-
-# Update already-installed formula
-upgrade
-
 # brewfiles
 brew 'redis'
 brew 'git'
@@ -85,3 +79,5 @@ cask 'istat-menus'
 cask 'ccleaner'
 cask 'dockertoolbox'
 cask 'gif-for-mac'
+cask 'github-desktop'
+cask 'bee'
